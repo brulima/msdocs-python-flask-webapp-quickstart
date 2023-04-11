@@ -1,0 +1,37 @@
+<!doctype html>
+<head>
+    <title>Flow Mapper</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<html>
+   <body>
+    <div id="div-form">
+        <form id="ProcessMap">
+            <div class="div-inside-block">  
+                <div id="from-placement"></div>
+                <button  type="button" onclick="selectAll('from')">Select All</button><br>
+            </div>
+            <div class="div-inside-block">
+                <div id="to-placement"></div>
+                <button type="button" onclick="selectAll('to')">Select All</button><br>
+            </div>
+            <div class="div-inside-block">  
+                <label for="process-name">Process:</label>
+                <input type="text" id="process-name" name="process-name"><br>
+
+                <label for="information">Info Type:</label>
+                <input type="text" id="information" name="information"><br>
+
+                <label for="system-name">System:</label>
+                <input type="text" id="system-name" name="system-name"><br>
+
+                <button type="button" onClick="submitForm()">Create Table</button>
+            </div>
+        </form>
+    </div><br>
+    <button type="button" onclick="copyTable()">Copy Table to Clipboard</button> <button type="button" onclick="cleanTable()">Clean</button>
+    <table id="result"> </table>
+    <div id="aux-table" ></div>
+   </body>
+</html>

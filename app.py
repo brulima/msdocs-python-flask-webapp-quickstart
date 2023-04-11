@@ -27,6 +27,10 @@ def hello():
        print('Request for hello page received with no name or blank name -- redirecting')
        return redirect(url_for('index'))
 
+@app.route('/flowMapper')
+def index():
+   print('Request for index page received')
+   return render_template('flowMapper.html')
 
 if __name__ == '__main__':
    app.run()
